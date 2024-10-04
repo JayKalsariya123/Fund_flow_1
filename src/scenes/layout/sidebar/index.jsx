@@ -18,7 +18,6 @@ import {
   TimelineOutlined,
   WavesOutlined,
 } from "@mui/icons-material";
-import avatar from "../../../assets/images/avatar.png";
 import logo from "../../../assets/images/logo.png";
 import Item from "./Item";
 import { ToggledContext } from "../../../App";
@@ -86,35 +85,8 @@ const SideBar = () => {
           </Box>
         </MenuItem>
       </Menu>
-      {!collapsed && (
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "10px",
-            mb: "25px",
-          }}
-        >
-          <Avatar
-            alt="avatar"
-            src={avatar}
-            sx={{ width: "100px", height: "100px" }}
-          />
-          <Box sx={{ textAlign: "center" }}>
-            <Typography variant="h3" fontWeight="bold" color={colors.gray[100]}>
-              Tony Stark
-            </Typography>
-            <Typography
-              variant="h6"
-              fontWeight="500"
-              color={colors.greenAccent[500]}
-            >
-              VP Fancy Admin
-            </Typography>
-          </Box>
-        </Box>
-      )}
+
+      {/* Removed the Avatar, Name, and Title section */}
 
       <Box mb={5} pl={collapsed ? undefined : "5%"}>
         <Menu
@@ -161,13 +133,13 @@ const SideBar = () => {
           />
           <Item
             title="All Investors"
-            path="/investor" 
+            path="/investor"
             colors={colors}
             icon={<ContactsOutlined />}
           />
           <Item
             title="All Developers"
-            path="/developer" 
+            path="/developer"
             colors={colors}
             icon={<ReceiptOutlined />}
           />
